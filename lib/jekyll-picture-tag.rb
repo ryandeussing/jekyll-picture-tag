@@ -153,7 +153,7 @@ module Jekyll
         source_tags = ''
         source_keys.each do |source|
           media = " media=\"#{instance[source]['media']}\"" unless source == 'source_default'
-          source_tags += "#{markdown_escape * 4}<source srcset=\"#{url}#{instance[source][:generated_src]}\"#{media}>\n"
+          source_tags += "#{markdown_escape * 4}<source data-srcset=\"#{url}#{instance[source][:generated_src]}\"#{media}>\n"
         end
 
         # Note: we can't indent html output because markdown parsers will turn 4 spaces into code blocks
